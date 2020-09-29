@@ -49,7 +49,7 @@ async function createApp(ssrContext, config = {}) {
   // here we inject the router and store to all child components,
   // making them available everywhere as `this.$router` and `this.$store`.
   const app = {
-    head: {"title":"dps-senior-frontend-test","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"![Dog and Pony Studios](https:\u002F\u002Fwww.dogandponystudios.com\u002Fapp\u002Fthemes\u002Fdps\u002Fassets\u002Fpublic\u002Fimages\u002Flogo-fbe89868bd.svg)"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"}],"style":[],"script":[]},
+    head: {"title":"Office listing","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"Dog And Pony assessment test"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"}],"style":[],"script":[]},
 
     router,
     nuxt: {
