@@ -15,13 +15,6 @@ export default {
 		]
 	},
 	/*
-	 * Global CSS
-	 */
-	css: [
-		'@/scss/main.scss'
-	],
-
-	/*
 	 * Plugins to load before mounting the App
 	 */
 	plugins: [],
