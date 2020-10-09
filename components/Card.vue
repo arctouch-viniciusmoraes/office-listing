@@ -15,7 +15,7 @@
 import Chevron from "@/assets/chevron-icon.vue";
 
 export default {
-  name: "officeCard",
+  name: "Card",
   props: {
     officeData: {
       type: Object,
@@ -31,35 +31,35 @@ export default {
 <style lang="scss" scoped>
 .Card {
 	@apply
-		cursor-pointer
-		h-40
-		my-3
-		rounded-lg
-		shadow
-		w-84;
+	cursor-pointer
+	h-40
+	my-3
+	rounded-lg
+	shadow
+	w-84;
 
 	&__frontFace {
 		@apply
-			flex
-			h-full
-			items-center
-			justify-between
-			py-2 px-5
-			text-white;
+		flex
+		h-full
+		items-center
+		justify-between
+		py-2 px-5
+		text-white;
 
 		svg {
 			@apply
-				fill-current
-				h-6
-				w-6;
+			fill-current
+			h-6
+			w-6;
 		}
 	}
 
 	.mainInfo {
 		&__title {
 			@apply
-				font-semibold
-				text-2xl;
+			font-semibold
+			text-2xl;
 		}
 	}
 

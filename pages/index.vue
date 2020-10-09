@@ -44,12 +44,12 @@ export default {
 		mt-4 mb-12
 		text-center;
 
-			.link {
-				@apply
-				text-xs
-				uppercase
-				text-teal-500
-			}
+		.link {
+			@apply
+			text-xs
+			uppercase
+			text-teal-500
+		}
 	}
 }
 </style>

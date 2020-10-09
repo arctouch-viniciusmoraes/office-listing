@@ -1,14 +1,15 @@
 <template>
   <div class="CardsList">
-    <div class="CardsList__addNew btn btn--blue">
-      <div>Add new location</div>
-      <PlusIcon />
-    </div>
+	<div class="CardsList__addNew" @click="openForm">
+	<Button label="Add new location">
+		<PlusIcon />
+	</Button>
+	</div>
+	<div class="CardsList__Form" :class="{opened: isFormOpened}"><Form @close="isFormOpened = false" /></div>
     <div
       class="CardsList__OfficeCard"
       :key="key"
-      v-for="(office, key) in offices"
-    >
+      v-for="(office, key) in offices">
       <Card :officeData="office" />
     </div>
   </div>
@@ -16,66 +17,62 @@
 
 <script>
 const offices = require("@/data/offices.json");
-import PlusIcon from "@/assets/plus-icon.vue";
+import Button from '@/components/IconButton.vue';
 import Card from "@/components/Card";
+import Form from "@/components/Form";
+
+import PlusIcon from "@/assets/plus-icon.vue";
 
 export default {
   name: "CardsList",
   components: {
+	Button,
     Card,
-    PlusIcon,
+	PlusIcon,
+	Form,
   },
   data() {
     return {
-      offices,
+	  offices,
+	  isFormOpened: false,
     };
   },
+  methods: {
+	openForm() {
+		this.isFormOpened = true;
+	},
+  }
+
 };
 </script>
 
 <style lang="scss" scoped>
 .CardsList {
 	@apply
-		flex
-		flex-col
-		items-center;
+	flex
+	flex-col
+	items-center;
 
-	&__addNew {
+	&__Form {
 		@apply
-			flex
-			font-thin
-			items-center
-			justify-between
-			shadow my-3
-			text-sm
-			w-84;
+		duration-500
+		h-auto
+		max-h-0
+		overflow-hidden
+		relative
+		top-0
+		transition-all;
 
-		svg {
+
+		&.opened {
 			@apply
-				fill-current
-				h-8
-				w-8;
+			-mb-20
+			duration-500
+			max-h-form
+			relative
+			top-n80
+			transition-all;
 		}
 	}
-
 }
-
-.btn {
-	@apply
-		cursor-pointer
-		py-2 px-4
-		rounded-lg
-		h-16;
-}
-
-.btn--blue {
-	@apply
-		bg-red-400
-		text-white;
-}
-
-.btn--blue:hover {
-	@apply bg-red-500;
-}
-
 </style>
