@@ -1,4 +1,7 @@
 {
-  "editor.tabSize": 2,
-  "css.validate": false
+  "css.validate": false,
+  "vetur.format.options.tabSize": 4,
+  "prettier.jsxSingleQuote": true,
+  "prettier.singleQuote": true,
+  "javascript.preferences.quoteStyle": "single"
 }

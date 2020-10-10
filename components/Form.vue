@@ -103,10 +103,10 @@ export default {
 
 	&__contactInfo--sectionHeader {
 		@apply
+		mb-4 mt-6
 		text-green-500
-		uppercase
 		text-sm
-		mb-4 mt-6;
+		uppercase;
 
 	}
 
