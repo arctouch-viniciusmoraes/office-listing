@@ -1,5 +1,5 @@
 <template>
-	<button class="SimpleButton">
+	<button class="SimpleButton" :class="{disabled: !enabled}">
 		<div class="SimpleButton__label">{{label}}</div>
 	</button>
 </template>
@@ -9,6 +9,7 @@ export default {
 	name: 'SimpleButton',
 	props: {
 		label: String,
+		enabled: Boolean,
 	}
 }
 </script>
@@ -20,6 +21,7 @@ export default {
 	cursor-pointer
 	font-thin
 	my-3
+	outline-none
 	p-2
 	rounded
 	text-sm
@@ -30,6 +32,16 @@ export default {
 		@apply
 		bg-gray-500
 		cursor-default;
+
+		&:hover {
+			@apply
+			bg-gray-500;
+		}
+	}
+
+	&:hover {
+		@apply
+		bg-green-500;
 	}
 }
 </style>

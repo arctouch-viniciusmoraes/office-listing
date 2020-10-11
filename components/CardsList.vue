@@ -13,13 +13,12 @@
             <Form @close="isFormOpened = false" />
         </div>
         <div
-			@click="toggleCardDetails(office._id)"
             class="CardsList__officeCard"
             :key="key"
-            v-for="(office, key) in offices"
+            v-for="(office, key) in officesList"
         >
             <div class="CardsList__officeCard--item">
-                <Card :officeData="office" />
+                <Card @click.native="toggleCardDetails(office._id)" :officeData="office" />
             </div>
             <div
                 class="CardsList__officeCard--detail"
@@ -53,7 +52,7 @@ export default {
     },
     data() {
         return {
-            offices,
+            officesList: offices,
             isFormOpened: false,
             isDetailOpened: false,
             selectedOffice: null,
@@ -126,7 +125,7 @@ export default {
 		&--detail {
 			height: 0;
 			@apply
-			duration-700
+			duration-500
 			ease-out
 			overflow-hidden
 			transition-all;
@@ -134,7 +133,7 @@ export default {
 			&.opened {
 				height: 250px;
 				@apply
-				duration-700
+				duration-500
 				ease-out
 				transition-all;
 			}

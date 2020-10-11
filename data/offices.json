@@ -21,7 +21,7 @@
   },
   {
     "_id": "5f7a6063bb51be3ff6bf4620",
-    "color": "bg-gray-800",
+    "color": "bg-gray-500",
     "fullName": "Rosie Wynn",
     "title": "Non do",
     "email": "rosiewynn@prosely.com",
@@ -31,7 +31,7 @@
   },
   {
     "_id": "5f7a6063e64a9432de08746c",
-    "color": "bg-blue-900",
+    "color": "bg-gray-800",
     "fullName": "Charlene Hopper",
     "title": "Ipsum ut",
     "email": "charlenehopper@prosely.com",
@@ -61,7 +61,7 @@
   },
   {
     "_id": "5f7a60636f21c8c5b68d344e",
-    "color": "bg-gray-600",
+    "color": "bg-gray-500",
     "fullName": "Grace Osborn",
     "title": "Anim mollit",
     "email": "graceosborn@prosely.com",

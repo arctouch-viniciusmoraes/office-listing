@@ -14,7 +14,7 @@
         </div>
         <hr />
         <section class="CardDetails__action">
-			<div class="CardDetails__action--delete">
+			<div class="CardDetails__action--delete" @click.prevent="">
 				<ActionButton
 					label="Edit"
 					bkgColor="bg-transparent"

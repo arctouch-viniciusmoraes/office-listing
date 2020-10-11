@@ -7,6 +7,7 @@
     "start": "nuxt start"
   },
   "dependencies": {
+    "awesome-mask": "^1.1.1",
     "nuxt": "^2.14.6",
     "tailwindcss": "^1.8.10"
   },
