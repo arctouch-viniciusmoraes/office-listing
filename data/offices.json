@@ -1,0 +1,82 @@
+[
+  {
+    "_id": "5f7a606315166aedc7a8fe38",
+    "color": "bg-teal-500",
+    "fullName": "Jacquelyn Hinton",
+    "title": "Headquarters",
+    "email": "jacquelynhinton@prosely.com",
+    "phone": "+1 (888) 493-3123",
+    "address": "572 Ryder Street, Colton",
+    "jobPosition": "Quality Analyst"
+  },
+  {
+    "_id": "5f7a6063040d279920dce5bc",
+    "color": "bg-orange-300",
+    "fullName": "Webster Rivers",
+    "title": "Adipisicing et",
+    "email": "websterrivers@prosely.com",
+    "phone": "+1 (949) 473-2435",
+    "address": "773 Beaumont Street, Brooktrails",
+    "jobPosition": "Product Manager"
+  },
+  {
+    "_id": "5f7a6063bb51be3ff6bf4620",
+    "color": "bg-gray-500",
+    "fullName": "Rosie Wynn",
+    "title": "Non do",
+    "email": "rosiewynn@prosely.com",
+    "phone": "+1 (946) 556-3254",
+    "address": "844 Melrose Street, Gerton",
+    "jobPosition": "Designer"
+  },
+  {
+    "_id": "5f7a6063e64a9432de08746c",
+    "color": "bg-gray-800",
+    "fullName": "Charlene Hopper",
+    "title": "Ipsum ut",
+    "email": "charlenehopper@prosely.com",
+    "phone": "+1 (821) 589-2444",
+    "address": "654 Suydam Place, Harviell",
+    "jobPosition": "Tech Lead"
+  },
+  {
+    "_id": "5f7a60635b14ebb9772734e1",
+    "color": "bg-orange-300",
+    "fullName": "Vargas Glover",
+    "title": "Proident voluptate",
+    "email": "vargasglover@prosely.com",
+    "phone": "+1 (826) 584-2218",
+    "address": "450 Fiske Place, Sandston",
+    "jobPosition": "Product Manager"
+  },
+  {
+    "_id": "5f7a606318324c7fe44585a2",
+    "color": "bg-red-300",
+    "fullName": "Horton Floyd",
+    "title": "Amet pariatur",
+    "email": "hortonfloyd@prosely.com",
+    "phone": "+1 (969) 487-2323",
+    "address": "460 Fleet Street, Ruckersville",
+    "jobPosition": "Tech Lead"
+  },
+  {
+    "_id": "5f7a60636f21c8c5b68d344e",
+    "color": "bg-gray-500",
+    "fullName": "Grace Osborn",
+    "title": "Anim mollit",
+    "email": "graceosborn@prosely.com",
+    "phone": "+1 (826) 406-3509",
+    "address": "957 Cumberland Walk, Veyo",
+    "jobPosition": "Product Manager"
+  },
+  {
+    "_id": "5f7a60633cc0e4485ddbb867",
+    "color": "bg-teal-500",
+    "fullName": "Wilkerson Cantrell",
+    "title": "Nostrud aliquip",
+    "email": "wilkersoncantrell@prosely.com",
+    "phone": "+1 (875) 523-2740",
+    "address": "936 Remsen Street, Gouglersville",
+    "jobPosition": "Tech Lead"
+  }
+]

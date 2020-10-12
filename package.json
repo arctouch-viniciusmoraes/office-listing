@@ -7,7 +7,26 @@
     "start": "nuxt start"
   },
   "dependencies": {
+    "awesome-mask": "^1.1.1",
     "nuxt": "^2.14.6",
     "tailwindcss": "^1.8.10"
-  }
+  },
+  "description": "![Dog and Pony Studios](https://www.dogandponystudios.com/app/themes/dps/assets/public/images/logo-fbe89868bd.svg)",
+  "version": "1.0.0",
+  "main": "nuxt.config.js",
+  "devDependencies": {
+    "@nuxtjs/tailwindcss": "^3.1.0",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^10.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arctouch-viniciusmoraes/office-listing.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arctouch-viniciusmoraes/office-listing/issues"
+  },
+  "homepage": "https://github.com/arctouch-viniciusmoraes/office-listing#readme"
 }
