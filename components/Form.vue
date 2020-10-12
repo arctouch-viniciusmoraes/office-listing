@@ -196,6 +196,7 @@ export default {
 	},
 	methods: {
 		close() {
+			this.isColorSelectorOpened = false;
 			this.$emit('close');
 		},
 		toggleColorSelector() {
