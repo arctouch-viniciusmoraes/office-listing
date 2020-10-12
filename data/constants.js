@@ -8,8 +8,8 @@ export const colorOptions = [
 		color: 'bg-red-400'
 	},
 	{
-		label: 'blue',
-		color: 'bg-blue-400'
+		label: 'pink',
+		color: 'bg-pink-300'
 	},
 	{
 		label: 'green',
@@ -17,6 +17,6 @@ export const colorOptions = [
 	},
 	{
 		label: 'grafitti',
-		color: 'bg-gray-400'
+		color: 'bg-gray-900'
 	},
 ];

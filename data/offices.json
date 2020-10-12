@@ -1,7 +1,7 @@
 [
   {
     "_id": "5f7a606315166aedc7a8fe38",
-    "color": "bg-blue-400",
+    "color": "bg-pink-300",
     "fullName": "Jacquelyn Hinton",
     "title": "Headquarters",
     "email": "jacquelynhinton@prosely.com",
@@ -31,7 +31,7 @@
   },
   {
     "_id": "5f7a6063e64a9432de08746c",
-    "color": "bg-gray-400",
+    "color": "bg-gray-900",
     "fullName": "Charlene Hopper",
     "title": "Ipsum ut",
     "email": "charlenehopper@prosely.com",
@@ -71,7 +71,7 @@
   },
   {
     "_id": "5f7a60633cc0e4485ddbb867",
-    "color": "bg-blue-400",
+    "color": "bg-pink-300",
     "fullName": "Wilkerson Cantrell",
     "title": "Nostrud aliquip",
     "email": "wilkersoncantrell@prosely.com",
