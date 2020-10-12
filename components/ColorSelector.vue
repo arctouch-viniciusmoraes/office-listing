@@ -3,11 +3,11 @@
         <div
             class="ColorSelector__colorBox"
             :key="key"
-            v-for="(option, key) in colorOptions"
-			:class="[option.color]"
-			@click="selectColor(option.color)"
+            v-for="(color, key) in colors"
+			:class="color"
+			@click="selectColor(color)"
         >
-			<div v-if="option.color === selectedColor" class="ColorSelector-selected">
+			<div v-if="color === selectedColor" class="ColorSelector-selected">
 				<Check />
 			</div>
 		</div>
@@ -24,11 +24,11 @@ export default {
 		Check,
 	},
 	props: {
-		colorOptions:Array,
 		selectedColor: String,
 	},
 	data() {
 		return {
+			colors: ['bg-orange-300', 'bg-red-300', 'bg-teal-500', 'bg-gray-500', 'bg-gray-800'],
 		};
 	},
 	methods: {

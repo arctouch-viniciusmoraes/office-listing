@@ -13,7 +13,7 @@
 					<div class="button__icon"><Chevron /> </div>
 				</button>
 				<div class="Form__colorSelector__colorList" :class="{opened: isColorSelectorOpened}">
-					<ColorSelector :colorOptions="colorOptions" :selectedColor="selectedColor" @selectColor="updateColorSelection" />
+					<ColorSelector :selectedColor="selectedColor" @selectColor="updateColorSelection" />
 				</div>
 			</div>
 			<div class="Form__input Form__input--title">
@@ -98,7 +98,6 @@
 
 <script>
 import validateForm from '@/utils/validation.js';
-import { colorOptions } from "@/data/constants.js";
 import AwesomeMask from 'awesome-mask';
 
 import Close from "@/assets/close-icon";
@@ -137,7 +136,6 @@ export default {
 	},
 	data() {
 		return {
-			colorOptions,
 			isColorSelectorOpened: false,
 			selectedColor: 'bg-orange-300',
 			error: {
