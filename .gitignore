@@ -1,5 +1,6 @@
 # Frontend Dependencies
 node_modules
+dist
 
 # IDE
 .idea
