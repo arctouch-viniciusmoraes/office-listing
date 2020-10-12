@@ -30,8 +30,8 @@ export default {
 <style lang="scss" scoped>
 .NotificationBar {
 	@apply
-	fixed
 	bg-white
+	fixed
 	flex
 	font-thin
 	h-20
@@ -42,7 +42,8 @@ export default {
 	top-0
 	tracking-wide
 	uppercase
-	w-full;
+	w-full
+	z-20;
 
 	&__checkIcon {
 		svg{
