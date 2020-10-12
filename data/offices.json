@@ -1,7 +1,7 @@
 [
   {
     "_id": "5f7a606315166aedc7a8fe38",
-    "color": "bg-teal-500",
+    "color": "bg-orange-300",
     "fullName": "Jacquelyn Hinton",
     "title": "Headquarters",
     "email": "jacquelynhinton@prosely.com",
@@ -11,7 +11,7 @@
   },
   {
     "_id": "5f7a6063040d279920dce5bc",
-    "color": "bg-teal-500",
+    "color": "bg-red-300",
     "fullName": "Webster Rivers",
     "title": "Adipisicing et",
     "email": "websterrivers@prosely.com",
@@ -31,7 +31,7 @@
   },
   {
     "_id": "5f7a6063e64a9432de08746c",
-    "color": "bg-teal-500",
+    "color": "bg-gray-500",
     "fullName": "Charlene Hopper",
     "title": "Ipsum ut",
     "email": "charlenehopper@prosely.com",
@@ -41,7 +41,7 @@
   },
   {
     "_id": "5f7a60635b14ebb9772734e1",
-    "color": "bg-teal-500",
+    "color": "bg-gray-800",
     "fullName": "Vargas Glover",
     "title": "Proident voluptate",
     "email": "vargasglover@prosely.com",
@@ -51,7 +51,7 @@
   },
   {
     "_id": "5f7a606318324c7fe44585a2",
-    "color": "bg-teal-500",
+    "color": "bg-orange-300",
     "fullName": "Horton Floyd",
     "title": "Amet pariatur",
     "email": "hortonfloyd@prosely.com",
@@ -61,7 +61,7 @@
   },
   {
     "_id": "5f7a60636f21c8c5b68d344e",
-    "color": "bg-teal-500",
+    "color": "bg-red-300",
     "fullName": "Grace Osborn",
     "title": "Anim mollit",
     "email": "graceosborn@prosely.com",
