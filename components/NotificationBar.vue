@@ -59,7 +59,7 @@ export default {
 		@apply
 		absolute
 		cursor-pointer
-		right-20;
+		right-10;
 
 		svg{
 			@apply
