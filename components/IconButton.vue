@@ -1,13 +1,20 @@
 <template>
 	<button class="IconButton">
 		<div class="IconButton__label">{{label}}</div>
-		<slot></slot>
+		<div class="IconButton__icon">
+			<PlusIcon />
+		</div>
 	</button>
 </template>
 
 <script>
+import PlusIcon from "@/assets/plus-icon";
+
 export default {
 	name: 'IconButton',
+	components: {
+		PlusIcon,
+	},
 	props: {
 		label: String,
 	}
@@ -36,11 +43,13 @@ export default {
 		text-white;
 	}
 
-	svg {
-		@apply
-		fill-current
-		text-white
-		w-8 h-8;
+	&__icon {
+		svg {
+			@apply
+			fill-current
+			text-white
+			w-8 h-8;
+		}
 	}
 
 	&:hover {

@@ -14,7 +14,7 @@
         </div>
         <hr />
         <section class="CardDetails__action">
-			<div class="CardDetails__action--delete" @click.prevent="">
+			<div class="CardDetails__action--delete" @click="editOffice">
 				<ActionButton
 					label="Edit"
 					bkgColor="bg-transparent"
@@ -22,7 +22,7 @@
 					><EditIcon />
 				</ActionButton>
 			</div>
-			<div class="CardDetails__action--delete">
+			<div class="CardDetails__action--delete" @click="deleteOffice">
 				<ActionButton
 					label="Delete"
 					bkgColor="bg-transparent"
@@ -36,8 +36,8 @@
 
 <script>
 import ActionButton from "@/components/ActionButton";
-import EditIcon from "@/assets/edit-icon.vue";
-import DeleteIcon from "@/assets/delete-icon.vue";
+import EditIcon from "@/assets/edit-icon";
+import DeleteIcon from "@/assets/delete-icon";
 
 export default {
     name: "CardDetails",
@@ -48,7 +48,15 @@ export default {
     },
     props: {
         officeDetails: Object,
-    },
+	},
+	methods: {
+		editOffice() {
+			this.$emit('edit');
+		},
+		deleteOffice() {
+			this.$emit('delete');
+		}
+	}
 };
 </script>
 

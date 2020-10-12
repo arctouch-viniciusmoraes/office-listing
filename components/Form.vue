@@ -80,16 +80,17 @@
 			<div class="Form__input Form__input--phone">
 				<label class="inputLabel" for="phone">Phone <sup>*</sup></label>
 				<input
-					v-model="field.phone.value"
+					v-model.trim="field.phone.value"
 					class="inputField"
 					:class="{invalid: !!error.phone}"
 					id="phone"
+					placeholder="(xxx) xxx-xxxx"
 					v-mask="'(999) 999-9999'"
 					type="email" @change="validateInputData">
 				<div v-if="!!error.phone" class="Form__input__errorIcon"><Attention /></div>
 				<span class="Form__input__error" v-if="!!error.phone">{{error.phone}}</span>
 			</div>
-			<Button label="Save" :enabled="isFormValidated" />
+			<Button label="Save" :enabled="isFormValidated" @click.native="handleSave" />
 
 		</section>
 	</section>
@@ -100,15 +101,21 @@ import validateForm from '@/utils/validation.js';
 import { colorOptions } from "@/data/constants.js";
 import AwesomeMask from 'awesome-mask';
 
-import Close from "@/assets/close-icon.vue";
+import Close from "@/assets/close-icon";
 import Chevron from "@/assets/chevron-thick-icon";
 import Attention from "@/assets/attention-icon";
 
-import ColorSelector from '@/components/ColorSelector.vue';
+import ColorSelector from '@/components/ColorSelector';
 import Button from '@/components/SimpleButton';
 
 export default {
 	name: 'Form',
+	props: {
+		officeData: {
+			default: null,
+			type: Object,
+		},
+	},
 	components: {
 		Attention,
 		Button,
@@ -116,12 +123,23 @@ export default {
 		Close,
 		ColorSelector,
 	},
+	computed: {
+		isFormValidated() {
+			return (
+				this.field.title.isValid &&
+				this.field.address.isValid &&
+				this.field.fullName.isValid &&
+				this.field.jobPosition.isValid &&
+				this.field.email.isValid &&
+				this.field.phone.isValid
+			);
+		}
+	},
 	data() {
 		return {
 			colorOptions,
 			isColorSelectorOpened: false,
-			selectedColor: null || 'bg-orange-300',
-			isFormValidated: false,
+			selectedColor: 'bg-orange-300',
 			error: {
 				title: null,
 				address: null,
@@ -161,6 +179,23 @@ export default {
 	directives: {
 		'mask': AwesomeMask,
 	},
+	watch: {
+		officeData() {
+			if (!!this.officeData) {
+				this.selectedColor = this.officeData.color;
+				Object.keys(this.field).forEach(item => {
+					this.field[item].value = this.officeData[item];
+					this.field[item].isValid = true;
+				});
+			} else {
+				this.selectedColor = 'bg-orange-300';
+				Object.keys(this.field).forEach(item => {
+					this.field[item].value = null;
+					this.field[item].isValid = false;
+				});
+			}
+		}
+	},
 	methods: {
 		close() {
 			this.$emit('close');
@@ -173,14 +208,25 @@ export default {
 			this.isColorSelectorOpened = false;
 		},
 		validateInputData(event) {
+			this.error[event.target.id] = null;
 			const validationResult = validateForm(event.target.id, event.target.value);
+
 			if (validationResult === 'ok') {
-				this.field[event.target.id].valid = true;
+				this.field[event.target.id].isValid = true;
 			} else {
+				this.field[event.target.id].isValid = false;
 				this.error[event.target.id] = validationResult;
 			}
-		}
-	}
+		},
+		handleSave() {
+			console.log('clicked save');
+			if (!!this.officeData) {
+				this.$emit('update', {inputs: this.field, color: this.selectedColor});
+			} else {
+				this.$emit('add', {inputs: this.field, color: this.selectedColor});
+			}
+		},
+	},
 }
 </script>
 <style lang="scss" scoped>

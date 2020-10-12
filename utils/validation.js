@@ -29,6 +29,8 @@ function validateTitle(value) {
 		return 'This field cannot be empty';
 	} else if (value.length > 0 && value.length < 3) {
 		return 'Please enter at least 3 chars';
+	} else {
+		return 'ok';
 	};
 }
 
@@ -37,6 +39,8 @@ function validateAddress(value) {
 		return 'This field cannot be empty';
 	} else if (value.length > 0 && value.length < 5) {
 		return 'Please enter at least 5 chars';
+	} else {
+		return 'ok';
 	};
 }
 
@@ -45,12 +49,16 @@ function validateFullName(value) {
 		return 'This field cannot be empty';
 	} else if (value.length > 0 && value.length < 3) {
 		return 'Please enter at least 3 chars';
+	} else {
+		return 'ok';
 	};
 }
 
 function validateJobPosition(value) {
 	if (value.length === 0) {
 		return 'This field cannot be empty';
+	} else {
+		return 'ok';
 	};
 }
 
@@ -61,6 +69,8 @@ function validateEmail(value) {
 		return 'This field cannot be empty';
 	} else if (!value.match(pattern)) {
 		return 'Please enter a valid email address'
+	} else {
+		return 'ok';
 	};
 }
 
@@ -71,5 +81,7 @@ function validatePhone(value) {
 		return 'This field cannot be empty';
 	} else if (!value.match(pattern) || value.length < 14) {
 		return 'Please enter a valid phone number'
+	} else {
+		return 'ok';
 	};
 }

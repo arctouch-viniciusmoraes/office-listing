@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import Chevron from "@/assets/chevron-icon.vue";
+import Chevron from "@/assets/chevron-icon";
 
 export default {
     name: "Card",
