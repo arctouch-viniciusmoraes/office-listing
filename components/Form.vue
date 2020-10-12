@@ -23,7 +23,7 @@
 					class="inputField"
 					:class="{invalid: !!error.title}"
 					id="title"
-					type="text" @change="validateInputData">
+					type="text" @input="validateInputData">
 				<div v-if="!!error.title" class="Form__input__errorIcon"><Attention /></div>
 				<span class="Form__input__error" v-if="!!error.title">{{error.title}}</span>
 			</div>
@@ -34,7 +34,7 @@
 					class="inputField"
 					:class="{invalid: !!error.address}"
 					id="address"
-					type="text" @change="validateInputData">
+					type="text" @input="validateInputData">
 				<div v-if="!!error.address" class="Form__input__errorIcon"><Attention /></div>
 				<span class="Form__input__error" v-if="!!error.address">{{error.address}}</span>
 			</div>
@@ -51,7 +51,7 @@
 					class="inputField"
 					:class="{invalid: !!error.fullName}"
 					id="fullName"
-					type="text" @change="validateInputData">
+					type="text" @input="validateInputData">
 				<div v-if="!!error.fullName" class="Form__input__errorIcon"><Attention /></div>
 				<span class="Form__input__error" v-if="!!error.fullName">{{error.fullName}}</span>
 			</div>
@@ -62,7 +62,7 @@
 					class="inputField"
 					:class="{invalid: !!error.jobPosition}"
 					id="jobPosition"
-					type="text" @change="validateInputData">
+					type="text" @input="validateInputData">
 				<div v-if="!!error.jobPosition" class="Form__input__errorIcon"><Attention /></div>
 				<span class="Form__input__error" v-if="!!error.jobPosition">{{error.jobPosition}}</span>
 			</div>
@@ -73,7 +73,7 @@
 					class="inputField"
 					:class="{invalid: !!error.email}"
 					id="email"
-					type="email" @change="validateInputData">
+					type="email" @input="validateInputData">
 				<div v-if="!!error.email" class="Form__input__errorIcon"><Attention /></div>
 				<span class="Form__input__error" v-if="!!error.email">{{error.email}}</span>
 			</div>
@@ -86,7 +86,7 @@
 					id="phone"
 					placeholder="(xxx) xxx-xxxx"
 					v-mask="'(999) 999-9999'"
-					type="email" @change="validateInputData">
+					type="email" @input="validateInputData">
 				<div v-if="!!error.phone" class="Form__input__errorIcon"><Attention /></div>
 				<span class="Form__input__error" v-if="!!error.phone">{{error.phone}}</span>
 			</div>
@@ -216,12 +216,12 @@ export default {
 				this.field[event.target.id].isValid = false;
 				this.error[event.target.id] = validationResult;
 			}
+			console.log(this.isFormValidated);
 		},
 		handleSave() {
-			console.log('clicked save');
-			if (!!this.officeData) {
+			if (!!this.officeData && this.isFormValidated) {
 				this.$emit('update', {inputs: this.field, color: this.selectedColor});
-			} else {
+			} else if (!this.officeData && this.isFormValidated) {
 				this.$emit('add', {inputs: this.field, color: this.selectedColor});
 			}
 		},
