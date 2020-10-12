@@ -216,7 +216,6 @@ export default {
 				this.field[event.target.id].isValid = false;
 				this.error[event.target.id] = validationResult;
 			}
-			console.log(this.isFormValidated);
 		},
 		handleSave() {
 			if (!!this.officeData && this.isFormValidated) {
