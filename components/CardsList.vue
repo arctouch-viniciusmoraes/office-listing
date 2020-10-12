@@ -65,7 +65,6 @@ export default {
 			this.selectedOfficeObj = null;
 			this.isDetailOpened = false;
 			this.isFormOpened = true;
-			this.goToTop();
 		},
 		closeForm() {
 			this.selectedOfficeId = null;
@@ -93,6 +92,7 @@ export default {
 		openEditForm() {
 			this.isDetailOpened = false;
 			this.isFormOpened = true;
+			this.goToTop();
 		},
 		addOffice(officeData) {
 			let id = Math.random().toString(36).substring(2);
